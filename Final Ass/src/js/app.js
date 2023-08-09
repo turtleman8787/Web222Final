@@ -131,9 +131,9 @@ function addReview(){
   reviewData.push(newObjMember);
 }
 
-var form = document.getElementById('Data');
-
-form.addEventListener("submit",e =>{
+//handle create review form
+var form2 = document.getElementById('Data');
+form2.addEventListener("submit",e =>{
   e.preventDefault(); 
   var reviews = document.getElementById('generatedReviews');
   reviews.innerHTML = "";
