@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Change this to your name-->
+    <meta name="author" content="Mike Elliott" />
+
+    <title>WEB222 Music App</title>
+    <!-- Classless CSS Stylesheet - https://oxal.org/projects/sakura/ -->
+    <link rel="stylesheet" href="./css/sakura.css" type="text/css" />
+    <style>
+      body{
+        background-color: rgb(209, 207, 207);
+      }
+      #main{
+        background-color: white;
+        border-top: 5px solid black;
+        padding: 5%;
+      }
+      #t1img{
+        display: flex;
+        
+        margin: 0;
+      }
+      #home{
+        display: flex;
+        flex-direction: column;
+      }
+      #homeCenter{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        
+      }
+      #email{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+      } 
+      #info{
+        flex-direction:column;
+      }
+      #reviews{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+      }
+      #reviewCard{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 2px solid black;
+        width: fit-content;
+        margin: 5px; 
+        padding: 5px;
+        width: 60%;
+        height: 300px;
+      }
+      .cardData{
+        font: 12px  ;
+        margin: 0;
+        height: fit-content;
+        width: fit-content;
+      }
+      #generatedReviews{        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px 0 10px ;
+      }
+      #inputTempReview{
+        width: 1177;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        border-top: 2px dashed black;
+        width: 38em;
+      }
+      #Data{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      #inputName{
+        background-color: rgb(177, 176, 176);
+      }
+      #inputDate{
+        background-color: rgb(177, 176, 176);
+      }
+      #inputRating{
+        background-color: rgb(177, 176, 176);
+      }
+      #inputText{
+        background-color: rgb(177, 176, 176);
+      }
+      #cardName{
+        margin: 0;
+        
+      }
+      #cardImg{
+        margin: 0;
+        display: flex;
+        border: 1px solid black;
+        height: 150px;
+        width: 150px;
+      }
+      #about{
+        display: none;
+        flex-direction: column;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Change this to your App's info -->
+      <h1>Tic-Tac-Toe</h1>
+      <p>Tic-Tac-Toe, a simple game of strategy and skill</p>
+    </header>
+
+    <nav id="menu">
+      <!-- Dynamically create your menu category buttons here -->
+    </nav>
+
+    <hr />
+
+    <main id="main">
+      <h2 id="selected-tab">
+        <!-- Dynamically update the selected category title -->
+      </h2>
+      <!--Tabs content-->
+      <div id="content">
+        <div id = "home" class = "tab" >
+          <div id ="homeCenter">
+          <img src = 'C:\Users\Mike\OneDrive\School\WEB222\Final Ass\src\Media\Images\Tictactoe-winning-vector-639732.webp' id="t1img"> 
+             
+          <p>Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. </p>
+          <img width="256" alt="TicTacToe-152374698XOp" src="https://upload.wikimedia.org/wikipedia/commons/d/da/TicTacToe-152374698XOp.gif">
+          </div>
+          <!-- Form HERE -->
+          <form id ="newsletter" method="post" action="https://httpbin.org/post">
+            <label for="emai">Email</label>
+            <input type = "email" id = "email">
+            <input name = "Michael Elliott" hidden> 
+            <input type="submit" id="submitEmail" value="Join">
+
+
+          </form>
+        </div>
+        <div id = "info" class = "tab" hidden>
+          <h3>History of Tic-Tac-Toe</h3>
+          <p>Tic-Tac-Toe, also known as noughts and crosses or Xs and Os, is a simple two-player game that has a long history and is played on a grid of 3x3 squares. The origins of the game can be traced back to ancient civilizations, making it difficult to pinpoint an exact time and place of its invention.</p>
+          <br>
+          <p>Early variations of the game have been found in different cultures around the world. For example: Ancient Egypt, Ancient Rome, Native American Culture and Medieval Europe.
+            The modern version of Tic-Tac-Toe, as we know it today, likely evolved over time from these various historical sources. It gained widespread popularity in the 20th century due to its simplicity and the ease of playing on paper. It's often used as a teaching tool to introduce basic game theory concepts and strategic thinking, especially for children.
+            </p>
+          <br>
+          <p>Tic-Tac-Toe is also used as a starting point for exploring more complex games, like chess and checkers. Despite its simplicity, it remains a timeless classic and is still enjoyed by people of all ages around the world.</p>
+          
+          <h3>How to play!</h3>
+          <p>Tic-Tac-Toe is a two-player game played on a 3x3 grid. The players take turns marking a square with their designated symbol, usually "X" and "O," with the goal of getting three of their symbols in a row, either horizontally, vertically, or diagonally. Here are the basic rules of Tic-Tac-Toe:</p>
+          <ol>
+            <li><b>Game Setup: </b>The game is played on a 3x3 grid, forming a total of 9 squares.</li>
+            <li><b>Player Turns: </b>Two players take turns to play the game. One player uses "X" and the other uses "O."</li>
+            <li><b>Objective: </b>The objective of the game is to be the first player to get three of their symbols in a row, either horizontally, vertically, or diagonally.</li>
+            <li><b>Taking Turns: </b>Players take turns placing their symbol on an empty square on the grid. Once a symbol is placed on a square, it cannot be moved or changed.</li>
+            <li><b>Winning Conditions: </b>A player wins the game if they have three of their symbols in a row. This can be achieved through a horizontal, vertical, or diagonal arrangement of their symbols. When a player achieves this, they announce their victory, and the game is over.</li>
+            <li><b>Draw Condition: </b>If all squares on the grid are filled and neither player has achieved three in a row, the game ends in a draw. This is often referred to as a "cat's game" or a "tie."</li>
+            <li><b>Starting Player: </b>The starting player is usually decided by a coin toss, drawing straws, or any other random method.</li>
+            <li><b>Strategy: </b>While Tic-Tac-Toe is a simple game, there is a basic strategy involved. Players aim to create a line of three of their symbols while also blocking their opponent from doing the same. The game can end in a win for the starting player if they play optimally, or it can end in a draw if both players make the best moves.</li>
+            <li><b>Game Variation: </b>While the classic version of Tic-Tac-Toe is played on a 3x3 grid, variations with larger grids, such as 4x4 or 5x5, exist, increasing the complexity and possibilities.</li>
+          </ol>
+          <h3>Tips and Tricks for Winning!!</h3>
+          <p>
+            Tic-Tac-Toe is a relatively simple game, but there are strategies you can employ to increase your chances of winning or at least avoid losing. Keep in mind that if both players play optimally, the game will often end in a draw. However, here are some tips and tricks to help you improve your chances of winning:
+            
+            Start in the Center: If you're the first player (playing as "X"), starting in the center square gives you the best chance of winning or forcing a draw. This move offers the most potential for different winning combinations.
+            
+            Block Your Opponent: Always prioritize blocking your opponent from getting three in a row. If your opponent has two symbols in a row and you can block their third move, do so. This prevents them from winning on their next turn.</p>
+          <ol>
+            <li><b>Start in the Center: </b>The game is played on a 3x3 grid, forming a total of 9 squares.</li>
+            <li><b>Block Your Opponent: </b>Two players take turns to play the game. One player uses "X" and the other uses "O."</li>
+            <li><b>Practice and Learn!:  </b>The more you play, the better you'll become at recognizing patterns and anticipating your opponent's moves.</li>
+            </ol>
+
+          <p>For more information and advanced strategy guides like you see below check out the <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Wiki</a>!!</p>
+          <img src="C:\Users\Mike\OneDrive\School\WEB222\Final Ass\src\Media\Images\Tictactoe-X.png">
+        </div>
+        <div id = "reviews" class = "tab" hidden>
+          <div id = "generatedReviews"></div>
+          <div id = "inputTempReview" hidden>
+            <p>Create a new review below!</p>
+            <form id = 'Data'>
+              
+              <label for = 'inputName'>Name</label>
+              <input id="inputName" type="text" name="inputName">
+
+              <label for = 'inputDate'>Name</label>
+              <input id="inputDate" type="date" name="inputDate">
+
+              <label for="inputRating">Rating (0-5)</label>
+              <input id="inputRating" type="range" min="0" max="5" step="0.1" />
+              <p>Rating: <output id="value"></output></p>
+              
+              <label for = 'inputText'>Write your review here:</label>
+              <input id="inputText" type="text" name="inputText">
+
+              <input type = "submit" id="submit"value = "Create Review!">
+
+            </form>
+
+
+
+
+          </div>
+
+
+
+
+
+        </div>
+
+        <div id = "about" class = "tab" hidden>
+          <p>My name is Michael Elliott. I am currently attending Seneca in the CPA program. I was born and raise here in Canada and grew up playing Tic-Tac-Toe against friends and family. I decided to create my website about Tic-Tac-Toe because of how popular it was to play while I was growing up. And I wanted to help share this game as much as possible. </p>
+          <h3>Citations</h3>
+          <ul>
+            <h4>Images</h4>
+            <li>https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tictactoe-X.svg/1024px-Tictactoe-X.svg.png</li>
+            <li>https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe              .svg/1024px-Tic_tac_toe.svg.png</li>
+            <li>https://www.dreamstime.com/default-avatar-profile-icon-vector-unknown-social-media-user-photo-default-avatar-profile-icon-vector-unknown-social-media-user-image184816085</li>
+            <h4>Information</h4>
+            <li>https://en.wikipedia.org/wiki/Tic-tac-toe</li>
+            <li>https://aurosi.com/blog/the-history-of-tic-tac-toe-and-where-it-is-now/</li>
+            <li>https://www.sporcle.com/blog/2019/12/what-is-the-origin-of-tic-tac-toe/</li>
+          </ul>
+
+          <br>
+          <h4>Honesty Statement:
+          </h4>
+          <p>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this
+            assessment has been copied manually or electronically from any other source (including web sites) except for the
+            information supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare
+            that no part of this assignment has been distributed to other students.
+            </p>
+
+
+
+
+        </div>
+
+
+
+
+      
+    </main>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/tabs.js"></script>
+    <script src="./js/reviewData.js"></script>
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
