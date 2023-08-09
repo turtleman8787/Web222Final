@@ -140,7 +140,7 @@ form2.addEventListener("submit",e =>{
   addReview();
   genReviews();
 });
-//c
+//Tab navigation buttons
 var navMenuBtns = document.querySelector("#menu").querySelectorAll("button");
 console.log(navMenuBtns);
 displayTabInfo('t1');
